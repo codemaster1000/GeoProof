@@ -1,19 +1,23 @@
 // GeoProof Design System
-// Dark Professional Theme
+// Yellow / Black / White Theme — Bold Professional Palette
+// Inspired by construction safety & field operations color language
 
 export const Colors = {
-  // Backgrounds
-  bg: '#0A0E1A',
-  surface: '#131929',
-  surfaceElevated: '#1A2236',
-  surfaceBorder: '#1E2D45',
+  // ─── Core Palette ─────────────────────────────────────────────────────
+  bg: '#000000',              // Pure black background
+  surface: '#111111',         // Slightly lifted surface
+  surfaceElevated: '#1A1A1A', // Cards, modals
+  surfaceBorder: '#2A2A2A',   // Borders and dividers
 
-  // Brand / Accent
-  accent: '#3D8BFF',
-  accentDark: '#2870E0',
-  accentGlow: 'rgba(61, 139, 255, 0.15)',
+  // ─── Brand / Accent ───────────────────────────────────────────────────
+  accent: '#F5C518',          // Vivid golden yellow
+  accentDark: '#D4A800',      // Pressed / darker yellow
+  accentGlow: 'rgba(245, 197, 24, 0.12)', // Yellow glow tint
 
-  // Semantic
+  // ─── Text on Yellow ───────────────────────────────────────────────────
+  textOnAccent: '#000000',    // Black text on yellow backgrounds
+
+  // ─── Semantic ─────────────────────────────────────────────────────────
   success: '#22C55E',
   successDark: '#16A34A',
   warning: '#F59E0B',
@@ -21,25 +25,25 @@ export const Colors = {
   danger: '#EF4444',
   dangerDark: '#DC2626',
 
-  // Text
-  textPrimary: '#F8FAFC',
-  textSecondary: '#94A3B8',
-  textMuted: '#475569',
-  textAccent: '#3D8BFF',
+  // ─── Text ─────────────────────────────────────────────────────────────
+  textPrimary: '#FFFFFF',       // Pure white
+  textSecondary: '#A0A0A0',     // Medium grey
+  textMuted: '#555555',         // Dimmed grey
+  textAccent: '#F5C518',        // Yellow for highlighted labels
 
-  // Overlays
-  overlay: 'rgba(0,0,0,0.6)',
-  overlayLight: 'rgba(0,0,0,0.3)',
-  overlayDark: 'rgba(0,0,0,0.85)',
+  // ─── Overlays ─────────────────────────────────────────────────────────
+  overlay: 'rgba(0,0,0,0.65)',
+  overlayLight: 'rgba(0,0,0,0.35)',
+  overlayDark: 'rgba(0,0,0,0.88)',
 
-  // White
+  // ─── Absolute ─────────────────────────────────────────────────────────
   white: '#FFFFFF',
   black: '#000000',
 
-  // Premium gold
-  gold: '#F59E0B',
+  // ─── Gold aliases (for premium UI) ────────────────────────────────────
+  gold: '#F5C518',
   goldDark: '#92400E',
-  goldGlow: 'rgba(245, 158, 11, 0.2)',
+  goldGlow: 'rgba(245, 197, 24, 0.15)',
 };
 
 export const Typography = {
@@ -85,22 +89,22 @@ export const Shadow = {
   sm: {
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3,
+    shadowOpacity: 0.5,
     shadowRadius: 4,
-    elevation: 3,
+    elevation: 4,
   },
   md: {
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4,
+    shadowOpacity: 0.6,
     shadowRadius: 8,
-    elevation: 6,
+    elevation: 8,
   },
   accent: {
-    shadowColor: '#3D8BFF',
+    shadowColor: '#F5C518',
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
+    shadowOpacity: 0.35,
     shadowRadius: 12,
-    elevation: 8,
+    elevation: 10,
   },
 };

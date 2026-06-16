@@ -1,25 +1,80 @@
 {
   "expo": {
     "name": "GeoProof",
-    "slug": "GeoProof",
+    "slug": "geoproof",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "scheme": "geoproof",
+    "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.geoproof.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "GeoProof uses the camera to capture GPS-tagged field documentation photos.",
+        "NSLocationWhenInUseUsageDescription": "GeoProof uses your location to embed GPS coordinates in field photos.",
+        "NSPhotoLibraryUsageDescription": "GeoProof accesses photos to generate documentation reports."
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#000000",
+        "foregroundImage": "./assets/adaptive-icon.png"
       },
+      "package": "com.geoproof.app",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.INTERNET",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
       "predictiveBackGestureEnabled": false
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "GeoProof uses the camera to capture GPS-tagged field documentation photos.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "GeoProof uses your location to embed GPS coordinates in field photos.",
+          "isAndroidBackgroundLocationEnabled": false
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow GeoProof to access your photos.",
+          "savePhotosPermission": "Allow GeoProof to save field documentation photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      "expo-sharing",
+      "expo-sqlite",
+      "expo-status-bar",
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511",
+          "userTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you.",
+          "skAdNetworkItems": []
+        }
+      ]
+    ],
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
     }
   }
 }
